@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>摇一摇</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/shake.css">
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="animatebox">
+				<div id="snowflake"></div>
+			</div>
+			<div class="logo_img"></div>
+			<div class="lightcontent" v-show="lightflag">
+				<span class="light_icon" :class="items.className" v-for="items in lightlist" :key="items.id" @click="showquestion">
+					<img :src="items.imgurl" alt="" width="100%"/>
+				</span>
+			</div>
+			<!--答题弹层-->
+			<div class="question" v-show="questionflag">
+				<h1>{{riddlelist.question}}</h1>
+				<ul>
+					<li v-for="(item,index) in riddlelist.answers" :key="item.id">
+						<p @click="changeindex(item,index)" :class="{cur:index === current_index}">{{item.options}}、{{item.title}}</p>
+					</li>
+				</ul>
+				<div class="confirmbtn" @click="submitfinal">提 交</div>
+			</div>
+			<div class="resultbox" v-show="resultflag">
+				<p class="resulttitle">{{resulttit}}</p>
+				<p class="resultmsg">{{resultmsg}}</p>
+				<div class="resultbotton" @click="nextopera">{{resultbtn}}</div>
+			</div>
+			<div class="drambox" v-show="dramflag">
+				<p class="transbg"><img src="img/drambg.png" alt="" width="100%"/></p>
+				<div class="drammsg" :style="{background:dramColor}">
+					<p>{{drammsg}}</p>
+				</div>
+				<div class="drambotton" :style="{background:dramColor}" @click="backhome">确定</div>
+			</div>
+			<!--答题弹层-->
+		</div>
+		
+		
+		
+		<script src="js/lib/jquery.1.10.1.min.js"></script>
+		<script src="js/lib/vue.min.js"></script>
+		<script src="js/lib/wauto.js"></script>
+		<script src="js/lib/jquery.transit.js"></script>
+		<script src="js/shake.js"></script>
+		<script src="js/leaf.js"></script>
+	</body>
+</html>

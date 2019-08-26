@@ -1,0 +1,261 @@
+@font-face {
+	font-family: 'PMZD-CU';
+	src: url(./font/PMZD-CU.TTF);
+}
+@font-face {
+	font-family:'PMZD-BIAO';
+	src: url(./font/PMZD-BIAO.TTF);
+}
+@font-face {
+	font-family:'YRDZST-REGULAR';
+	src: url(./font/YRDZST-REGULAR.TTF);
+}
+html,body{
+	width:100%;
+	height:100%;
+}
+#wrapper{
+	width:100%;
+	height:13.34rem;
+	background:url(../img/bg.png) no-repeat;
+	background-size:100% 100%;
+	position:relative;
+}
+.animatebox{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0px;
+	top:0px;
+	overflow: hidden;
+}
+#snowflake{
+	width: 100%;
+	height: 100%;
+    overflow: hidden;
+}
+.snowRoll{
+	position: absolute; 
+	opacity: 0; 
+	-webkit-animation-name: mysnow; 
+	-webkit-animation-duration: 20s; 
+	-moz-animation-name: mysnow; 
+	-moz-animation-duration: 20s; 
+	height: 80px; 
+}
+@-webkit-keyframes mysnow {  
+	0% {
+		bottom: 100%;
+	}
+	50% {
+		-webkit-transform: rotate(1080deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg) translate3d(50px, 50px, 50px);
+	}
+}
+@-moz-keyframes mysnow {  
+ 	0% {
+		bottom: 100%;
+	}
+	50% {
+		-moz-transform: rotate(1080deg);
+	}
+	100% {
+		-moz-transform: rotate(0deg) translate3d(50px, 50px, 50px);
+	}
+}
+.logo_img{
+	width:100%;
+	height:4.6rem;
+	background:url(../img/logo.png) no-repeat center center;
+	background-size:contain;
+	position:absolute;
+	z-index:99;
+}
+.shakeMain{
+	width:100%;
+	height:8.71rem;
+	background:url(../img/shake_bg.png) no-repeat center center;
+	background-size:contain;
+	position:absolute;
+	left:0px;
+	top:2.84rem;
+}
+.content{
+	padding:1.1rem 1rem 0px 1rem;
+	color:#FFFFFF;
+	font-size:.35rem;
+	font-family:'PMZD-CU';
+}
+.content>p{
+	width:1.2rem;
+	height:1.2rem;
+	float: left;
+}
+.submitbtn{
+	width:2.15rem;
+	height:0.68rem;
+	line-height:0.68rem;
+	background:#1d4298;
+	border:1px solid #ffcb44;
+	border-radius:1rem;
+	text-align: center;
+	font-size:0.32rem;
+	color:#FFFFFF;
+	position:absolute;
+	left:2.68rem;
+	bottom:1rem;
+}
+.foot-dt{
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	width:100%;
+}
+.foot-dt>p{
+	text-align: center;
+	color:#FFFFFF;
+	line-height:.34rem;
+	transform: scale(.8);
+}
+.light_icon{
+	position:absolute;
+}
+.light_icon.zhong{
+	width:1.8rem;
+	left:.65rem;
+	top:5.9rem;
+}
+.light_icon.qiu1{
+	width:1.15rem;
+	left:3rem;
+	top:4.5rem;
+}
+.light_icon.hui{
+	width:1.42rem;
+	right:.84rem;
+	top:5.25rem;
+}
+.light_icon.qiu2{
+	width:1.15rem;
+	left:4.25rem;
+	top:7.4rem;
+}
+.light_icon.da{
+	width:1.4rem;
+	left:2.8rem;
+	top:9.1rem;
+}
+.question{
+	width:100%;
+	height:7.25rem;
+	background:url(../img/answer_icon.png) no-repeat center center;
+	background-size:contain;
+	position:absolute;
+	left:0px;
+	top:4.15rem;
+}
+.question h1{
+	padding:1.1rem 1.5rem .5rem 1.5rem;
+	font-size:.36rem;
+	color:#000000;
+}
+.question ul{
+	padding:0px 1.5rem;
+}
+.question ul li{
+	text-align: center;
+	font-size:.32rem;
+	color:#000000;
+	padding:.25rem 0px;
+}
+.question ul li p.cur{
+	background:#DEDEDE;
+}
+.confirmbtn{
+	position:absolute;
+	left:2.65rem;
+	top:5.4rem;
+	width:2.14rem;
+	height:.56rem;
+	line-height:.56rem;
+	background:#548cee;
+	border:3px solid #244ca4;
+	border-radius:.5rem;
+	font-size:.3rem;
+	color:#FFFFFF;
+	text-align: center;
+}
+.resultbox{
+	position:absolute;
+	top:4.49rem;
+	width:100%;
+	height:5.96rem;
+	background:url(../img/mask_img.png) no-repeat center center;
+	background-size:contain;
+}
+.resulttitle{
+	font-family:'PMZD-BIAO';
+	font-size:0.62rem;
+	color:#6d3212;
+	text-align: center;
+	margin-top:1.54rem;
+}
+.resultmsg{
+	font-size:0.26rem;
+	color:#6d3212;
+	text-align: center;
+	/*margin-top:.3rem;*/
+}
+.resultbotton{
+	width:2.18rem;
+	height:.6rem;
+	background:#ffcb44;
+	border:1px solid #2e499f;
+	line-height:.6rem;
+	text-align: center;
+	font-size:.32rem;
+	color:#000000;
+	border-radius:.5rem;
+	margin:1.7rem auto 0px auto;
+}
+.drambox{
+	width:100%;
+	height:3.71rem;
+	position:absolute;
+	top:5.22rem;
+}
+.transbg{
+	width:100%;
+	height:3.71rem;
+	position:absolute;
+	z-index:99;
+}
+.drammsg{
+	width:5.19rem;
+	height:2.5rem;
+	position:absolute;
+	left:1.16rem;
+	top:.35rem;
+}
+.drammsg>p{
+	padding:.44rem;
+	font-family:'YRDZST-REGULAR';
+	font-size:.36rem;
+	color:#FFFFFF;
+}
+.drambotton{
+	width:2.14rem;
+	height:.66rem;
+	background:#c23151;
+	line-height:.66rem;
+	text-align: center;
+	font-size:.32rem;
+	color:#FFFFFF;
+	border:2px solid #ffcb44;
+	border-radius:.5rem;
+	position:absolute;
+	bottom:-.72rem;
+	left:2.65rem;
+}
